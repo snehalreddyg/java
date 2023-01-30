@@ -1,0 +1,23 @@
+public class MyStringBuilder
+{
+public static void main(String[] args)
+{
+StringBuilder s1=new StringBuilder("Engineering");
+StringBuilder s2=new StringBuilder("world");
+System.out.println(s1.delete(8,11));
+System.out.println(s2.length());
+System.out.println(s1.append("ing"));
+System.out.println(s2.appendCodePoint(5));
+System.out.println(s2.deleteCharAt(3));
+System.out.println(s2.replace(0,4,"form"));
+System.out.println(s1.insert(19, s2));
+System.out.println(s2.lastIndexOf("form", 6));
+System.out.println(s1.insert(0," students"));
+System.out.println(s2.capacity());
+System.out.println(s1.reverse());
+System.out.println(s2.codePointCount (0,4));
+System.out.println(s1.compareTo(s2));
+System.out.println(s2.append(1));
+System.out.println(s2.charAt(2));
+}
+}
