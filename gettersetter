@@ -1,0 +1,16 @@
+class CSE
+{
+var name: String = " "
+// getter
+get() = field
+// setter
+set(value) {
+field = value
+}
+}
+fun main(args: Array<String>) {
+val c = CSE()
+// access setter
+c.name = "WELCOME TO CSE-B"
+println(c.name) // access getter
+} 
