@@ -1,0 +1,14 @@
+class CSE
+{
+//companion object name in this program is Test
+companion object Test
+{
+var v:Int=100
+fun section_b() = println("WELCOME TO CSE-B MAD LAB")
+}
+}
+fun main(args: Array<String>)
+{
+println(CSE.v) // accessing variable using class name
+CSE.section_b() // method accessing using class name
+}
