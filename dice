@@ -1,0 +1,38 @@
+package com.example.diceroll
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+
+class MainActivity : AppCompatActivity() {
+    lateinit var btn:Button
+    lateinit var img:ImageView
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        btn=findViewById(R.id.button)
+        img=findViewById(R.id.image)
+        btn.setOnClickListener {
+            rollDice()
+        }
+    }
+    fun rollDice(){
+        val dice=Dice(6)
+        val diceRoll=dice.roll()
+        val drawableResource=when (diceRoll){
+            1 ->R.drawable.one
+            2 ->R.drawable.two
+            3 ->R.drawable.three
+            4 ->R.drawable.four
+            5->R.drawable.five
+            else->R.drawable.six
+        }
+        img.setImageResource(drawableResource)
+    }
+}
+class Dice(val numSides:Int){
+    fun roll():Int{
+        return(1..numSides).random()
+    }
+}
