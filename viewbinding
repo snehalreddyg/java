@@ -1,0 +1,25 @@
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import com.example.my_viewbinding.databinding.ActivityMainBinding
+class MainActivity : AppCompatActivity() {
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+//setContentView(R.layout.activity_main)
+var binding = ActivityMainBinding.inflate(layoutInflater)
+val view = binding.root
+setContentView(view)
+// var btn1 : Button = findViewById(R.id.btn_click)
+// btn1.setOnClickListener(){
+//var etxt1 : EditText = findViewById(R.id.eTxt)
+//var tv1: TextView = findViewById(R.id.tvShow)
+// var msg: String= etxt1.text.toString()
+//tv1.text=msg
+//}
+binding.btnClick.setOnClickListener(){
+binding.tvShow.setText(binding.eTxt.text)
+}
+}
+}
