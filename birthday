@@ -1,0 +1,27 @@
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var txt:EditText
+    private lateinit var btn:Button
+    private lateinit var img:ImageView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        txt=findViewById(R.id.textView)
+        btn=findViewById(R.id.button)
+        img=findViewById(R.id.imageView)
+        btn.setOnClickListener()
+        {
+            when(txt.text.toString())
+            {
+                "img"->img.setImageResource(R.drawable.one)
+                "img_1"->img.setImageResource(R.drawable.two)
+            }
+        }
+    }
+}
