@@ -1,0 +1,27 @@
+import android.annotation.SuppressLint
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+
+class MainActivity : AppCompatActivity() {
+    lateinit var startbtn:Button
+    lateinit var stopbtn:Button
+
+    @SuppressLint("MissingInflatedId", "CutPasteId")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        startbtn=findViewById(R.id.button)
+        stopbtn=findViewById(R.id.button2)
+        startbtn.setOnClickListener()
+        {
+            Toast.makeText(this, "Start button clicked", Toast.LENGTH_SHORT).show()
+        }
+        stopbtn.setOnClickListener()
+        {
+            Toast.makeText(this, " Stop button clicked", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+}
